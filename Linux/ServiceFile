@@ -1,0 +1,12 @@
+[Unit]
+Description=Demo .NET Web API Application After=network.target
+
+[Service]
+WorkingDirectory=/var/www/devopsapi
+ExecStart=/usr/bin/dotnet /var/www/devopsapi/mrithun_webapp.dll
+Restart=always
+User=root
+Environment=ASPNETCORE_URLS=http://0.0.0.0:5000
+
+[Install]
+WantedBy=multi-user.target
